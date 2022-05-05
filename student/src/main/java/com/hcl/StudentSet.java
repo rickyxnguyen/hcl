@@ -1,0 +1,59 @@
+package com.hcl;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class StudentSet {
+	public static void main(String[] args) {
+
+		List<Student> list = new ArrayList<Student>();
+
+
+		Set<Student> set = new HashSet<>();
+		
+
+		list.add(new Student(1, "Brandon", 99));
+		list.add(new Student(2, "Dakota", 98));
+		list.add(new Student(3, "Nate", 97));
+		list.add(new Student(4, "Lisa", 96));
+		list.add(new Student(6, "Crystal", 100));
+
+		adding(new Student(7, "Kevin", 100),list,set);
+		update(list,set);
+		remove(list,set);
+
+
+	}
+
+	private static void adding(Student x, List<Student> list, Set<Student> set){
+		list.add(x);
+		printing(list, set);
+
+	}
+
+	private static void printing(List<Student> students, Set<Student> set){
+		set.clear();
+		set.addAll(students);
+
+		set.stream()
+		.forEach(student -> System.out.printf("\nRoll Number: %s, Name %s, Age: %s", ((Student) student).getRollNumber(),
+				((Student) student).getName(), ((Student) student).getAge()));
+		System.out.println();
+	}
+
+	private static void update(List<Student> list, Set<Student> set){
+		list.set(1,new Student(7, "Yasmine", 21));
+		printing(list, set);
+
+
+	}
+
+	private static void remove(List<Student> list, Set<Student> set){
+		list.remove(1);
+		printing(list, set);
+
+
+	}
+}
