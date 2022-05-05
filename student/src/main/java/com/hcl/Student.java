@@ -1,23 +1,22 @@
 package com.hcl;
-
 //Plain old java objects (POJO)
 public class Student {
-	private int rollnumber;
+	private int id;
 	private String name;
 	private int age;
 
-	public Student(int rollnumber, String name, int age) {
-		this.rollnumber = rollnumber;
+	public Student(int id, String name, int age) {
+		this.id = id;
 		this.name = name;
 		this.age = age;
 	}
 
-	public int getRollNumber() {
-		return rollnumber;
+	public int getID() {
+		return id;
 	}
 
-	public void setRollNumber(int rollnumber) {
-		this.rollnumber = rollnumber;
+	public void setID(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -38,13 +37,19 @@ public class Student {
 
 	@Override
 	public int hashCode() {
-		return this.rollnumber + this.name.hashCode() + this.age;
+		return this.id + this.name.hashCode() + this.age;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
 		Student s = (Student) obj;
-		return s.age == age && s.rollnumber == rollnumber && s.name.equals(name);
+		return s.age == age && s.id == id && s.name.equals(name);
 	}
 
+	@Override
+	public String toString() {
+		return "Student [age=" + age + ", name=" + name + ", id=" + id + "]";
+	}
+
+	
 }
