@@ -26,9 +26,9 @@ public class Intermdiate {
 
         // *** this returns product = null
 
-        Optional<Product> product1 = productsList.stream()
-        .filter(x -> x.getId() == 8)
-        .collect(Collectors.toList()));
+        // Optional<Product> product1 = productsList.stream()
+        // .filter(x -> x.getId() == 8)
+        // .collect(Collectors.toList()));
 
         //*** this returns Optional<product>
 

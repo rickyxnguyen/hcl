@@ -91,11 +91,11 @@ public class StudentSet {
 		int age = scanner.nextInt();
 
 		if (studentExists(id)) {
-			//will decline appending adding if student with id exists
+			// will decline appending adding if student with id exists
 			System.out.println("A student with that ID already exists.");
 			System.out.println();
 		} else {
-			//appends if input will not generate a duplicate
+			// appends if input will not generate a duplicate
 			Student student = new Student(id, name, age);
 			studentSet.add(student);
 			System.out.printf("Successfully added new student: \n ID: %d, Name: %s, Age: %d\n", student.getID(),
@@ -116,18 +116,13 @@ public class StudentSet {
 	}
 
 	private static Student getStudentById(int id) {
-		//grabs student from treeset if id matches
-		for (Student student : studentSet) {
-			if (student.getID() == id) {
-				return student;
-			}
-		}
-		return null;
-
+		// grabs student from treeset if id matches
+		Student student = studentSet.stream().filter(p -> p.getID() == (id)).findAny().orElse(null);
+		return student;
 	}
 
 	private static boolean isRemoved(int id) {
-		//returns true or false if student exists with inputted id
+		// returns true or false if student exists with inputted id
 		return studentExists(id);
 	}
 
@@ -135,11 +130,11 @@ public class StudentSet {
 		System.out.println("*******Delete Student*******");
 		System.out.print("Please enter the ID of the student you would like to delete: ");
 		int id = scanner.nextInt();
-		//checks if student exists first
+		// checks if student exists first
 		if (studentExists(id)) {
 			System.out.printf("Are you sure you want to delete the student with the ID of %d? [y/n]\n", id);
 			String input = scanner.next();
-			//if selected either Y or y student will be removed
+			// if selected either Y or y student will be removed
 			if (input.equalsIgnoreCase("y")) {
 				studentSet.remove(getStudentById(id));
 				if (isRemoved(id)) {
@@ -157,7 +152,7 @@ public class StudentSet {
 		System.out.println("*******Look up Student*******");
 		System.out.print("Please enter the Roll Number of the student you want to look up: ");
 		int id = scanner.nextInt();
-		//grabs student only if student exists
+		// grabs student only if student exists
 		if (studentExists(id)) {
 			Student student = getStudentById(id);
 			System.out.printf("Student #%d is %s and is %d years old.\n", id, student.getName(), student.getAge());
@@ -170,7 +165,7 @@ public class StudentSet {
 		System.out.println("*******Update Student*******");
 		System.out.println("Please enter the ID of the student you want to update: ");
 		int id = scanner.nextInt();
-		//checks if student exists and then will prompt changes to values
+		// checks if student exists and then will prompt changes to values
 		if (studentExists(id)) {
 			Student student = getStudentById(id);
 			System.out.printf("Student #%d's current name is: %s, and current age is: %d\n", id, student.getName(),
@@ -188,7 +183,7 @@ public class StudentSet {
 	}
 
 	private static void listStudents() {
-		//prints to the console the file information and treeset values
+		// prints to the console the file information and treeset values
 		System.out.println("*******Printing Students*******");
 		try {
 			writeToFile(studentSet);
@@ -200,7 +195,7 @@ public class StudentSet {
 	}
 
 	private static void writeToFile(Set<Student> set) throws IOException {
-		//writes to file what values the treeset has
+		// writes to file what values the treeset has
 		String data = studentSet.stream().map(e -> e.toString()).collect(Collectors.joining("\n"));
 
 		try (FileWriter fw = new FileWriter("output.txt");) {
@@ -219,7 +214,7 @@ public class StudentSet {
 	}
 
 	private static void readFile() throws IOException {
-		//reads the lines from the file if exists
+		// reads the lines from the file if exists
 		System.out.println("Printing the file");
 		try (FileReader fr = new FileReader("output.txt");
 				BufferedReader br = new BufferedReader(fr)) {
