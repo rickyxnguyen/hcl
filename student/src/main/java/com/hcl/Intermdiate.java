@@ -3,15 +3,12 @@ package com.hcl;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class Intermdiate {
     public static void main(String[] args) {
-        // create a Optional
-        Optional<Product> product1 = Optional.empty();
 
-        // print value
-        System.out.println("Optional: "+ product1);
+
+
         List<Product> productList = new ArrayList<Product>();
         productList.add(new Product(1, "HP Laptop", 2500));
         productList.add(new Product(2, "Lenovo Laptop", 1000));
@@ -19,18 +16,21 @@ public class Intermdiate {
         productList.add(new Product(4, "Macbook Pro", 2800));
         productList.add(new Product(5, "Macbook Air", 1800));
 
-        List<Product> product = productList.stream()
+        Optional<Product> product = productList.stream()
                 .filter(x -> x.getId() == 4)
-                .collect(Collectors.toList());
-        System.out.println(product);
+                .findAny();
 
         // *** this returns product = null
 
-        // Optional<Product> product1 = productsList.stream()
-        // .filter(x -> x.getId() == 8)
-        // .collect(Collectors.toList()));
+        Optional<Product> product1 = productList.stream()
+                .filter(x -> x.getId() == 4)
+                .findFirst();
 
-        //*** this returns Optional<product>
+        // *** this returns Optional<product>
+
+        product.ifPresent(System.out::println);
+        product1.ifPresent(System.out::println);
+
 
     }
 }

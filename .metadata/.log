@@ -1466,3 +1466,1352 @@ Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: Property 'sc
 	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:194)
 	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:123)
 	... 20 more
+!SESSION 2022-05-05 20:07:10.663 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=17.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2022-05-05 20:07:14.488
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2022-05-05 20:07:29.343
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-05 20:07:29.343
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@625c9248,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c1ef806,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-05 20:07:29.343
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@969c2f9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7bbc11ed,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-05-05 20:07:34.854
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-05-05 20:07:34.855
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-05-05 20:07:34.881
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ricky'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY net.sf.eclipsecs.core 4 0 2022-05-05 20:07:36.124
+!MESSAGE Checkstyle-Plugin: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:476)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createCheckerInternal(CheckerFactory.java:240)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createChecker(CheckerFactory.java:122)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:139)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:307)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:128)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:471)
+	... 18 more
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.tryCopyProperty(AutomaticBean.java:227)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:194)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:123)
+	... 20 more
+
+!ENTRY net.sf.eclipsecs.core 4 0 2022-05-05 20:09:32.870
+!MESSAGE Checkstyle-Plugin: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:476)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createCheckerInternal(CheckerFactory.java:240)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createChecker(CheckerFactory.java:122)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:139)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:307)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:128)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:471)
+	... 18 more
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.tryCopyProperty(AutomaticBean.java:227)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:194)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:123)
+	... 20 more
+!SESSION 2022-05-05 20:09:34.873 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=17.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-05-05 20:09:38.797
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-05 20:09:38.797
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40304938,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d160161,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-05 20:09:38.797
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c9e7af2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@48cbb4c5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-05-05 20:09:43.823
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-05-05 20:09:43.824
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-05-05 20:09:43.847
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ricky'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2022-05-06 07:53:18.343 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=17.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2022-05-06 07:53:50.737
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 07:53:50.737
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@533690d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3bf306d3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-06 07:53:50.737
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5101b9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40273969,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-05-06 07:54:01.646
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2022-05-06 07:54:01.647
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2022-05-06 07:54:01.689
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\ricky'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY net.sf.eclipsecs.core 4 0 2022-05-06 08:25:05.217
+!MESSAGE Checkstyle-Plugin: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:476)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createCheckerInternal(CheckerFactory.java:240)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createChecker(CheckerFactory.java:122)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:139)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:307)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:128)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:471)
+	... 18 more
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.tryCopyProperty(AutomaticBean.java:227)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:194)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:123)
+	... 20 more
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.270
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[7,1] (javadoc) MissingJavadocType: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.271
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[7,1] (design) HideUtilityClassConstructor: Utility classes should not have a public or default constructor.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.272
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[8,5] (javadoc) MissingJavadocMethod: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.274
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[13,53] (coding) MagicNumber: '2500' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.275
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[14,57] (coding) MagicNumber: '1000' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.276
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[15,37] (coding) MagicNumber: '3' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.277
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[15,55] (coding) MagicNumber: '1300' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.278
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[16,37] (coding) MagicNumber: '4' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.279
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[16,55] (coding) MagicNumber: '2800' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.281
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[17,37] (coding) MagicNumber: '5' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.281
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[17,55] (coding) MagicNumber: '1800' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.282
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[20,43] (coding) MagicNumber: '4' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.283
+!MESSAGE src\main\java\com\hcl\Intermdiate.java:[26,43] (coding) MagicNumber: '4' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.284
+!MESSAGE src\main\java\com\hcl\Product.java:[3,1] (javadoc) MissingJavadocType: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.285
+!MESSAGE src\main\java\com\hcl\Product.java:[5,12] (design) VisibilityModifier: Variable 'name' must be private and have accessor methods.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.286
+!MESSAGE src\main\java\com\hcl\Product.java:[6,9] (design) VisibilityModifier: Variable 'price' must be private and have accessor methods.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.287
+!MESSAGE src\main\java\com\hcl\Product.java:[7,9] (design) VisibilityModifier: Variable 'id' must be private and have accessor methods.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.288
+!MESSAGE src\main\java\com\hcl\Product.java:[9,5] (javadoc) MissingJavadocMethod: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.288
+!MESSAGE src\main\java\com\hcl\Student.java:[1] (misc) NewlineAtEndOfFile: File does not end with a newline.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.289
+!MESSAGE src\main\java\com\hcl\Student.java:[2,1] (whitespace) EmptyLineSeparator: '//' should be separated from previous statement.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.290
+!MESSAGE src\main\java\com\hcl\Student.java:[3,1] (whitespace) EmptyLineSeparator: 'CLASS_DEF' should be separated from previous statement.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.290
+!MESSAGE src\main\java\com\hcl\Student.java:[3,1] (javadoc) MissingJavadocType: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.291
+!MESSAGE src\main\java\com\hcl\Student.java:[4,1] (whitespace) FileTabCharacter: File contains tab characters (this is the first instance).
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.292
+!MESSAGE src\main\java\com\hcl\Student.java:[4,9] (indentation) Indentation: 'member def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.293
+!MESSAGE src\main\java\com\hcl\Student.java:[5,9] (indentation) Indentation: 'member def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.294
+!MESSAGE src\main\java\com\hcl\Student.java:[6,9] (indentation) Indentation: 'member def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.295
+!MESSAGE src\main\java\com\hcl\Student.java:[8,9] (indentation) Indentation: 'ctor def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.296
+!MESSAGE src\main\java\com\hcl\Student.java:[8,9] (javadoc) MissingJavadocMethod: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.297
+!MESSAGE src\main\java\com\hcl\Student.java:[9,17] (indentation) Indentation: 'ctor def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.298
+!MESSAGE src\main\java\com\hcl\Student.java:[10,17] (indentation) Indentation: 'ctor def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.299
+!MESSAGE src\main\java\com\hcl\Student.java:[11,17] (indentation) Indentation: 'ctor def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.301
+!MESSAGE src\main\java\com\hcl\Student.java:[12,9] (indentation) Indentation: 'ctor def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.302
+!MESSAGE src\main\java\com\hcl\Student.java:[14,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.303
+!MESSAGE src\main\java\com\hcl\Student.java:[15,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.304
+!MESSAGE src\main\java\com\hcl\Student.java:[16,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.305
+!MESSAGE src\main\java\com\hcl\Student.java:[18,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.306
+!MESSAGE src\main\java\com\hcl\Student.java:[18,31] (coding) HiddenField: 'id' hides a field.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.307
+!MESSAGE src\main\java\com\hcl\Student.java:[19,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.308
+!MESSAGE src\main\java\com\hcl\Student.java:[20,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.309
+!MESSAGE src\main\java\com\hcl\Student.java:[22,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.310
+!MESSAGE src\main\java\com\hcl\Student.java:[23,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.311
+!MESSAGE src\main\java\com\hcl\Student.java:[24,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.312
+!MESSAGE src\main\java\com\hcl\Student.java:[26,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.313
+!MESSAGE src\main\java\com\hcl\Student.java:[27,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.314
+!MESSAGE src\main\java\com\hcl\Student.java:[28,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.315
+!MESSAGE src\main\java\com\hcl\Student.java:[30,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.316
+!MESSAGE src\main\java\com\hcl\Student.java:[31,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.317
+!MESSAGE src\main\java\com\hcl\Student.java:[32,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.319
+!MESSAGE src\main\java\com\hcl\Student.java:[34,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.320
+!MESSAGE src\main\java\com\hcl\Student.java:[35,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.321
+!MESSAGE src\main\java\com\hcl\Student.java:[36,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.321
+!MESSAGE src\main\java\com\hcl\Student.java:[38,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.322
+!MESSAGE src\main\java\com\hcl\Student.java:[40,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.323
+!MESSAGE src\main\java\com\hcl\Student.java:[41,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.324
+!MESSAGE src\main\java\com\hcl\Student.java:[43,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.325
+!MESSAGE src\main\java\com\hcl\Student.java:[45,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.326
+!MESSAGE src\main\java\com\hcl\Student.java:[46,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.326
+!MESSAGE src\main\java\com\hcl\Student.java:[47,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.326
+!MESSAGE src\main\java\com\hcl\Student.java:[49,9] (whitespace) EmptyLineSeparator: 'METHOD_DEF' has more than 1 empty lines after.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.328
+!MESSAGE src\main\java\com\hcl\Student.java:[49,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.328
+!MESSAGE src\main\java\com\hcl\Student.java:[51,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.329
+!MESSAGE src\main\java\com\hcl\Student.java:[52,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.330
+!MESSAGE src\main\java\com\hcl\Student.java:[54] (regexp) RegexpSingleline: Line has trailing spaces.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.331
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[1] (misc) NewlineAtEndOfFile: File does not end with a newline.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.331
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[12,1] (javadoc) MissingJavadocType: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.332
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[12,1] (design) HideUtilityClassConstructor: Utility classes should not have a public or default constructor.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.334
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[13,1] (indentation) CommentsIndentation: Comment has incorrect indentation level 0, expected is 1, indentation should be the same level as line 14.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.335
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[13,3] (whitespace) FileTabCharacter: File contains tab characters (this is the first instance).
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.335
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[14,9] (indentation) Indentation: 'member def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.337
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[14,43] (naming) ConstantName: Name 'studentSet' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.337
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[15,17] (indentation) Indentation: 'if' has incorrect indentation level 16, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.338
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[15,17] (whitespace) WhitespaceAround: 'if' is not followed by whitespace.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.339
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[16,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.340
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[17,17] (indentation) Indentation: 'if rcurly' has incorrect indentation level 16, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.341
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[18] (regexp) RegexpSingleline: Line has trailing spaces.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.343
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[19,17] (indentation) Indentation: 'block' child has incorrect indentation level 16, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.344
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[22,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.345
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[22,9] (javadoc) MissingJavadocMethod: Missing a Javadoc comment.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.346
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[24,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.347
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[27,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.348
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[27,55] (coding) MagicNumber: '20' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.349
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[28,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.350
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[28,56] (coding) MagicNumber: '48' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.351
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[29,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.352
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[29,44] (coding) MagicNumber: '3' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.353
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[29,57] (coding) MagicNumber: '12' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.354
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[30,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.354
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[30,44] (coding) MagicNumber: '4' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.356
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[30,58] (coding) MagicNumber: '23' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.356
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[31,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.357
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[31,44] (coding) MagicNumber: '5' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.358
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[31,56] (coding) MagicNumber: '22' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.359
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[33,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.360
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[35,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.362
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[36,17] (indentation) Indentation: 'while' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.363
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[37,25] (indentation) Indentation: 'while' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.363
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[38,25] (indentation) Indentation: 'while' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.365
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[39,25] (indentation) Indentation: 'while' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.366
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[40,25] (indentation) Indentation: 'switch' has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.367
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[41,33] (indentation) Indentation: 'case' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.369
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[42,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.370
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[43,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.371
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[44,33] (indentation) Indentation: 'case' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.372
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[45,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.373
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[46,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.374
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[47,33] (indentation) Indentation: 'case' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.374
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[47,38] (coding) MagicNumber: '3' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.375
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[48,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.376
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[49,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.377
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[50,33] (indentation) Indentation: 'case' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.378
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[50,38] (coding) MagicNumber: '4' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.379
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[51,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.380
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[52,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.381
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[53,33] (indentation) Indentation: 'case' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.381
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[53,38] (coding) MagicNumber: '5' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.382
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[54,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.383
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[55,41] (indentation) Indentation: 'try' has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.383
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[56,49] (indentation) Indentation: 'try' child has incorrect indentation level 48, expected level should be 24.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.384
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[57,41] (indentation) Indentation: 'try rcurly' has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.385
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[58,49] (indentation) Indentation: 'catch' child has incorrect indentation level 48, expected level should be 24.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.385
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[59,41] (indentation) Indentation: 'catch rcurly' has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.386
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[60,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.387
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[61,33] (indentation) Indentation: 'case' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.388
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[61,38] (coding) MagicNumber: '6' is a magic number.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.389
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[62,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.390
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[63,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.390
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[64,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.391
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[65,33] (indentation) Indentation: 'case' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.392
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[66,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.392
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[67,41] (indentation) Indentation: 'block' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.393
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[68,25] (indentation) Indentation: 'switch rcurly' has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.394
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[69,17] (indentation) Indentation: 'while rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.394
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[70,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.395
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[72,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.396
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[73,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.396
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[74,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.397
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[76,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.398
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[77,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.398
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[78,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.399
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[80,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.400
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[81,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.401
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[82,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.401
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[84,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.402
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[87,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.403
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[88,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.404
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[90,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.405
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[91,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.405
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[92,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.406
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[93,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.407
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[94,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.407
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[95,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.408
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[96,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.409
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[98,17] (indentation) Indentation: 'if' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.410
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[100,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.410
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[101,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.411
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[102,17] (indentation) Indentation: 'if rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.412
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[104,25] (indentation) Indentation: 'else' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.413
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[105,25] (indentation) Indentation: 'else' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.413
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[106] (sizes) LineLength: Line is longer than 120 characters (found 124).
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.414
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[106,25] (indentation) Indentation: 'else' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.415
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[108,17] (indentation) Indentation: 'else rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.416
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[109,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.416
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[111,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.417
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[112,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.418
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[113,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.419
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[114,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.419
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[115,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.420
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[116,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.421
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[117,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.422
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[118,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.422
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[119,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.423
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[120,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.424
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[121,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.425
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[123,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.425
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[125,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.426
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[125,70] (coding) UnnecessaryParentheses: Unnecessary parentheses around identifier 'id'.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.426
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[127,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.427
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[129,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.427
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[131,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.429
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[132,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.429
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[134,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.430
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[135,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.431
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[136,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.431
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[137,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.433
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[139,17] (indentation) Indentation: 'if' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.433
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[140,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.434
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[141,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.434
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[143,25] (indentation) Indentation: 'if' has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.435
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[143,51] (coding) EqualsAvoidNull: String literal expressions should be on the left side of an equalsIgnoreCase comparison.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.436
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[144,33] (indentation) Indentation: 'if' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.437
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[145,33] (indentation) Indentation: 'if' has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.438
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[145,33] (coding) NestedIfDepth: Nested if-else depth is 2 (max allowed is 1).
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.438
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[146,41] (indentation) Indentation: 'if' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.440
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[147,33] (indentation) Indentation: 'if rcurly' has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.440
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[148,41] (indentation) Indentation: 'else' child has incorrect indentation level 40, expected level should be 20.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.440
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[149,33] (indentation) Indentation: 'else rcurly' has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.441
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[150,25] (indentation) Indentation: 'if rcurly' has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.442
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[150,58] (coding) EqualsAvoidNull: String literal expressions should be on the left side of an equalsIgnoreCase comparison.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.442
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[151,33] (indentation) Indentation: 'if' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.443
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[152,25] (indentation) Indentation: 'if rcurly' has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.444
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[153,17] (indentation) Indentation: 'if rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.445
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[154,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.445
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[156,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.446
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[157,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.447
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[158,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.447
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[159,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.449
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[161,17] (indentation) Indentation: 'if' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.449
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[162,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.451
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[163] (sizes) LineLength: Line is longer than 120 characters (found 127).
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.451
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[163,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.451
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[164,17] (indentation) Indentation: 'if rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.452
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[165,25] (indentation) Indentation: 'else' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.453
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[166,17] (indentation) Indentation: 'else rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.454
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[167,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.454
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[169,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.455
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[170,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.456
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[171,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.457
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[172,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.457
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[174,17] (indentation) Indentation: 'if' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.459
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[175,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.459
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[176] (sizes) LineLength: Line is longer than 120 characters (found 127).
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.460
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[176,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.460
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[178,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.461
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[179,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.462
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[180,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.462
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[181,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.464
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[183] (sizes) LineLength: Line is longer than 120 characters (found 125).
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.464
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[183,25] (indentation) Indentation: 'if' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.466
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[185,17] (indentation) Indentation: 'if rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.466
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[186,25] (indentation) Indentation: 'else' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.468
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[187,17] (indentation) Indentation: 'else rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.468
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[188,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.469
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[190,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.470
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[192,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.471
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[193,17] (indentation) Indentation: 'try' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.473
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[194,25] (indentation) Indentation: 'try' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.473
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[195,25] (indentation) Indentation: 'try' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.475
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[196,17] (indentation) Indentation: 'try rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.476
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[197,25] (indentation) Indentation: 'catch' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.477
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[198,17] (indentation) Indentation: 'catch rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.479
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[200,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.480
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[202,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.482
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[204,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.483
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[206,17] (indentation) Indentation: 'try' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.484
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[208,25] (indentation) Indentation: 'try' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.485
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[210,49] (indentation) Indentation: 'try' has incorrect indentation level 48, expected level should be 44.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.486
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[211,57] (indentation) Indentation: 'try' child has incorrect indentation level 56, expected level should be 48.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.486
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[212,49] (indentation) Indentation: 'try rcurly' has incorrect indentation level 48, expected level should be 44.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.487
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[213,57] (indentation) Indentation: 'catch' child has incorrect indentation level 56, expected level should be 48.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.489
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[214,49] (indentation) Indentation: 'catch rcurly' has incorrect indentation level 48, expected level should be 44.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.489
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[217,25] (indentation) Indentation: 'try' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.490
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[218,17] (indentation) Indentation: 'try rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.491
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[219,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.492
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[221,9] (indentation) Indentation: 'method def modifier' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.493
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[223,17] (indentation) Indentation: 'method def' child has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.494
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[224,17] (indentation) Indentation: 'try' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.495
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[227,25] (indentation) Indentation: 'try' child has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.496
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[228,25] (indentation) Indentation: 'while' has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.498
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[229,33] (indentation) Indentation: 'while' child has incorrect indentation level 32, expected level should be 16.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.499
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[230,25] (indentation) Indentation: 'while rcurly' has incorrect indentation level 24, expected level should be 12.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.501
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[231,17] (indentation) Indentation: 'try rcurly' has incorrect indentation level 16, expected level should be 8.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2022-05-06 08:25:13.502
+!MESSAGE src\main\java\com\hcl\StudentSet.java:[232,9] (indentation) Indentation: 'method def rcurly' has incorrect indentation level 8, expected level should be 4.
+
+!ENTRY org.eclipse.mylyn.commons.ui 4 0 2022-05-06 08:25:16.259
+!MESSAGE For input string: "or" under radix 16
+!STACK 0
+java.lang.NumberFormatException: For input string: "or" under radix 16
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at org.eclipse.mylyn.internal.commons.ui.E4ThemeColor.getRGBFromCssString(E4ThemeColor.java:57)
+	at org.eclipse.mylyn.commons.ui.GradientColors.getRGBFromTheme(GradientColors.java:212)
+	at org.eclipse.mylyn.commons.ui.GradientColors.getBackground(GradientColors.java:190)
+	at org.eclipse.mylyn.commons.ui.GradientColors.createBorderColor(GradientColors.java:78)
+	at org.eclipse.mylyn.commons.ui.GradientColors.createColors(GradientColors.java:54)
+	at org.eclipse.mylyn.commons.ui.GradientColors.<init>(GradientColors.java:50)
+	at org.eclipse.mylyn.commons.ui.GradientToolTip.initResources(GradientToolTip.java:49)
+	at org.eclipse.mylyn.commons.ui.GradientToolTip.<init>(GradientToolTip.java:44)
+	at org.eclipse.mylyn.internal.tasks.ui.views.TaskListToolTip.<init>(TaskListToolTip.java:126)
+	at org.eclipse.mylyn.internal.tasks.ui.views.TaskListFilteredTree.createActiveTaskComposite(TaskListFilteredTree.java:423)
+	at org.eclipse.mylyn.commons.workbench.AbstractFilteredTree.createFilterControls(AbstractFilteredTree.java:181)
+	at org.eclipse.ui.dialogs.FilteredTree.createControl(FilteredTree.java:362)
+	at org.eclipse.mylyn.commons.workbench.EnhancedFilteredTree.createControl(EnhancedFilteredTree.java:61)
+	at org.eclipse.mylyn.commons.workbench.AbstractFilteredTree.createControl(AbstractFilteredTree.java:91)
+	at org.eclipse.ui.dialogs.FilteredTree.init(FilteredTree.java:331)
+	at org.eclipse.ui.dialogs.FilteredTree.<init>(FilteredTree.java:289)
+	at org.eclipse.mylyn.commons.workbench.EnhancedFilteredTree.<init>(EnhancedFilteredTree.java:48)
+	at org.eclipse.mylyn.commons.workbench.AbstractFilteredTree.<init>(AbstractFilteredTree.java:71)
+	at org.eclipse.mylyn.internal.tasks.ui.views.TaskListFilteredTree.<init>(TaskListFilteredTree.java:134)
+	at org.eclipse.mylyn.internal.tasks.ui.views.TaskListView.createPartControl(TaskListView.java:590)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:158)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityView.createPartControl(CompatibilityView.java:155)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:365)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:960)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:330)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:110)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4779)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1381)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1331)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1182)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1042)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1961)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:336)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY net.sf.eclipsecs.core 4 0 2022-05-06 08:28:47.417
+!MESSAGE Checkstyle-Plugin: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:476)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createCheckerInternal(CheckerFactory.java:240)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createChecker(CheckerFactory.java:122)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:139)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:307)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:128)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:471)
+	... 18 more
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.tryCopyProperty(AutomaticBean.java:227)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:194)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:123)
+	... 20 more
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-06 08:28:48.142
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:683)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:275)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:290)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:268)
+	at org.eclipse.mylyn.internal.tasks.ui.views.TaskListFilteredTree.createAdditionalControls(TaskListFilteredTree.java:619)
+	at org.eclipse.mylyn.commons.workbench.AbstractFilteredTree.createFilterControls(AbstractFilteredTree.java:189)
+	at org.eclipse.ui.dialogs.FilteredTree.createControl(FilteredTree.java:362)
+	at org.eclipse.mylyn.commons.workbench.EnhancedFilteredTree.createControl(EnhancedFilteredTree.java:61)
+	at org.eclipse.mylyn.commons.workbench.AbstractFilteredTree.createControl(AbstractFilteredTree.java:91)
+	at org.eclipse.ui.dialogs.FilteredTree.init(FilteredTree.java:331)
+	at org.eclipse.ui.dialogs.FilteredTree.<init>(FilteredTree.java:289)
+	at org.eclipse.mylyn.commons.workbench.EnhancedFilteredTree.<init>(EnhancedFilteredTree.java:48)
+	at org.eclipse.mylyn.commons.workbench.AbstractFilteredTree.<init>(AbstractFilteredTree.java:71)
+	at org.eclipse.mylyn.internal.tasks.ui.views.TaskListFilteredTree.<init>(TaskListFilteredTree.java:134)
+	at org.eclipse.mylyn.internal.tasks.ui.views.TaskListView.createPartControl(TaskListView.java:590)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:158)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityView.createPartControl(CompatibilityView.java:155)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:365)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:960)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:330)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:110)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4779)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1381)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1331)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1182)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1042)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1961)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:336)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4060)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3632)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY net.sf.eclipsecs.core 4 0 2022-05-06 08:34:47.809
+!MESSAGE Checkstyle-Plugin: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module TreeWalker - cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:476)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createCheckerInternal(CheckerFactory.java:240)
+	at net.sf.eclipsecs.core.builder.CheckerFactory.createChecker(CheckerFactory.java:122)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:139)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:307)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:860)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:232)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:281)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:334)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:337)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:392)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:417)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:161)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:255)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: cannot initialize module JavadocMethod - Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:128)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:201)
+	at com.puppycrawl.tools.checkstyle.Checker.setupChild(Checker.java:471)
+	... 18 more
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: Property 'scope' does not exist, please check the documentation
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.tryCopyProperty(AutomaticBean.java:227)
+	at com.puppycrawl.tools.checkstyle.api.AutomaticBean.configure(AutomaticBean.java:194)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.setupChild(TreeWalker.java:123)
+	... 20 more

@@ -1,6 +1,7 @@
 package com.hcl;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,9 +12,15 @@ import java.util.stream.Collectors;
 
 public class StudentSet {
 	// creates a treeset that will sort alphabetically
-	private static final Set<Student> studentSet = new TreeSet<>((o1, o2) -> o1.getName().compareTo(o2.getName()));
+	private static final Set<Student> studentSet = new TreeSet<>((o1, o2) -> {
+		if (o1.getName().compareTo(o2.getName()) == 0) {
+			return o1.getAge() - o2.getAge();
+		}
 
-	public static void main(String[] args) {
+		return o1.getName().compareTo(o2.getName());
+	});
+
+	public static void main(String[] args) throws IOException {
 		// initialize scanner to accept user input
 		Scanner scanner = new Scanner(System.in);
 
@@ -23,7 +30,7 @@ public class StudentSet {
 		studentSet.add(new Student(3, "Nathan", 12));
 		studentSet.add(new Student(4, "Brandon", 23));
 		studentSet.add(new Student(5, "Ricky", 22));
-
+		
 		welcome();
 		// default value until user exits program
 		boolean cont = true;
@@ -46,11 +53,6 @@ public class StudentSet {
 					break;
 				case 5:
 					listStudents();
-					try {
-						readFile();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
 					break;
 				case 6:
 					cont = false;
@@ -81,7 +83,7 @@ public class StudentSet {
 		return studentSet.stream().anyMatch(i -> i.getID() == id);
 	}
 
-	private static void addStudent(Scanner scanner) {
+	private static void addStudent(Scanner scanner) throws IOException {
 		System.out.print("Please enter the Student's ID: ");
 		int id = scanner.nextInt();
 		System.out.print("Please enter the Student's name: ");
@@ -99,6 +101,8 @@ public class StudentSet {
 			studentSet.add(student);
 			System.out.printf("Successfully added new student: \n ID: %d, Name: %s, Age: %d\n", student.getID(),
 					student.getName(), student.getAge());
+			writeToFile(studentSet);
+
 		}
 	}
 
@@ -125,7 +129,7 @@ public class StudentSet {
 		return studentExists(id);
 	}
 
-	private static void deleteStudent(Scanner scanner) {
+	private static void deleteStudent(Scanner scanner) throws IOException {
 		System.out.println("*******Delete Student*******");
 		System.out.print("Please enter the ID of the student you would like to delete: ");
 		int id = scanner.nextInt();
@@ -138,6 +142,7 @@ public class StudentSet {
 				studentSet.remove(getStudentById(id));
 				if (isRemoved(id)) {
 					System.out.printf("Successfully removed student %d\n", id);
+					writeToFile(studentSet);
 				} else {
 					System.out.printf("Student %d does not exist.\n", id);
 				}
@@ -160,7 +165,7 @@ public class StudentSet {
 		}
 	}
 
-	private static void updateStudent(Scanner scanner) {
+	private static void updateStudent(Scanner scanner) throws IOException {
 		System.out.println("*******Update Student*******");
 		System.out.println("Please enter the ID of the student you want to update: ");
 		int id = scanner.nextInt();
@@ -176,19 +181,27 @@ public class StudentSet {
 
 			System.out.printf("Successfully updated student #%d with name %s, and age %d", id, student.getName(),
 					student.getAge());
+			writeToFile(studentSet);
 		} else {
 			System.out.printf("Student with ID of: %d could not be found.\n", id);
 		}
 	}
 
-	private static void listStudents() {
+	private static void listStudents() throws IOException {
 		// prints to the console the file information and treeset values
 		System.out.println("*******Printing Students*******");
-		try {
-			writeToFile(studentSet);
-			studentSet.forEach(student -> System.out.println(student.toString()));
-		} catch (IOException e) {
-			e.printStackTrace();
+
+		File f = new File("output.txt"); // Checking if the specified file exists or not
+		if (f.exists()) // Show if the file exists
+			readFile();
+		else{
+			try {
+				writeToFile(studentSet);
+				studentSet.forEach(student -> System.out.println(student.toString()));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
 		}
 
 	}
