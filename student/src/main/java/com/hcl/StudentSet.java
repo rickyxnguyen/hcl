@@ -69,7 +69,6 @@ public class StudentSet {
 
 	private static void goodbye() {
 		System.out.println("\n==========Goodbye==========");
-
 	}
 
 	private static void invalidInput() {
@@ -117,8 +116,8 @@ public class StudentSet {
 
 	private static Student getStudentById(int id) {
 		// grabs student from treeset if id matches
-		Student student = studentSet.stream().filter(p -> p.getID() == (id)).findAny().orElse(null);
-		return student;
+		return studentSet.stream().filter(p -> p.getID() == (id)).findAny().orElse(null);
+
 	}
 
 	private static boolean isRemoved(int id) {
