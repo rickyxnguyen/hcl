@@ -30,7 +30,7 @@ public class StudentSet {
 		studentSet.add(new Student(3, "Nathan", 12));
 		studentSet.add(new Student(4, "Brandon", 23));
 		studentSet.add(new Student(5, "Ricky", 22));
-		
+
 		welcome();
 		// default value until user exits program
 		boolean cont = true;
@@ -194,10 +194,10 @@ public class StudentSet {
 		File f = new File("output.txt"); // Checking if the specified file exists or not
 		if (f.exists()) // Show if the file exists
 			readFile();
-		else{
+		else {
 			try {
 				writeToFile(studentSet);
-				studentSet.forEach(student -> System.out.println(student.toString()));
+				studentSet.forEach(System.out::println);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
